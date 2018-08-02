@@ -16,7 +16,7 @@ Then open [http://localhost:3000/](http://localhost:3000/) to see your app.
 ## Mock UI for the App
 
 <h1 align="center">
-  <img src="./public/product-table.png" style="max-width:100%" alt="Mock UI" />
+  <img src="https://cdn.rawgit.com/palashmon/thinking-in-react/6ed0cf96/01-simple-product-list-app/public/product-table.png" style="max-width:100%" alt="Mock UI" />
 </h1>
 
 ## Formatting Code Automatically
