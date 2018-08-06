@@ -7,6 +7,15 @@ import React, { Component } from 'react';
  * The value of the checkbox
  */
 export default class SearchBar extends Component {
+  // Call the callbacks passed as props to notify owner component
+  // when onChange event on the inputs is fired
+  handleFilterTextChange = e => {
+    this.props.onFilterTextChange(e.target.value);
+  };
+  handleInStockChange = e => {
+    this.props.onInStockChange(e.target.checked);
+  };
+
   render() {
     const { filterText, inStockOnly } = this.props;
 
@@ -19,11 +28,15 @@ export default class SearchBar extends Component {
               placeholder="Search..."
               className="form-control input-block"
               value={filterText}
-              onChange={() => {}}
+              onChange={this.handleFilterTextChange}
             />
             <p>
-              <input type="checkbox" checked={inStockOnly} /> Only show products
-              in stock
+              <input
+                type="checkbox"
+                checked={inStockOnly}
+                onChange={this.handleInStockChange}
+              />{' '}
+              Only show products in stock
             </p>
           </form>
         </div>

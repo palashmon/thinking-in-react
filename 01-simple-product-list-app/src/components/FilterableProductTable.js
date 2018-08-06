@@ -14,6 +14,18 @@ export default class FilterableProductTable extends Component {
     inStockOnly: false
   };
 
+  // Update app state on user input
+  handleFilterTextChange = filterText => {
+    this.setState({
+      filterText: filterText
+    });
+  };
+  handleInStockChange = inStockOnly => {
+    this.setState({
+      inStockOnly: inStockOnly
+    });
+  };
+
   render() {
     const { filterText, inStockOnly } = this.state;
 
@@ -21,7 +33,12 @@ export default class FilterableProductTable extends Component {
       <div className="container">
         <div className="details-container">Simple Product Table</div>
         <div className="content-main">
-          <SearchBar filterText={filterText} inStockOnly={inStockOnly} />
+          <SearchBar
+            filterText={filterText}
+            inStockOnly={inStockOnly}
+            onFilterTextChange={this.handleFilterTextChange}
+            onInStockChange={this.handleInStockChange}
+          />
           <ProductTable
             products={this.props.products}
             filterText={filterText}
