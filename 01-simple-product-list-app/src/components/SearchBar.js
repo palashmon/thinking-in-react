@@ -8,6 +8,8 @@ import React, { Component } from 'react';
  */
 export default class SearchBar extends Component {
   render() {
+    const { filterText, inStockOnly } = this.props;
+
     return (
       <div className="content-header">
         <div className="content-info">
@@ -16,9 +18,12 @@ export default class SearchBar extends Component {
               type="text"
               placeholder="Search..."
               className="form-control input-block"
+              value={filterText}
+              onChange={() => {}}
             />
             <p>
-              <input type="checkbox" /> Only show products in stock
+              <input type="checkbox" checked={inStockOnly} /> Only show products
+              in stock
             </p>
           </form>
         </div>
