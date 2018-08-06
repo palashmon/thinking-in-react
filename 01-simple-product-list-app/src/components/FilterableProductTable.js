@@ -10,7 +10,7 @@ import ProductTable from './ProductTable';
  */
 export default class FilterableProductTable extends Component {
   state = {
-    filterText: 'ball',
+    filterText: '',
     inStockOnly: false
   };
 
