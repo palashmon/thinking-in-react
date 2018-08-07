@@ -1,5 +1,5 @@
 {
-  "name": "01-simple-product-list-app",
+  "name": "thinking-in-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,9 +8,8 @@
     "react-scripts": "^1.1.4"
   },
   "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^7.2.0",
-    "prettier": "^1.14.0"
+    "babel-plugin-module-resolver": "3.1.1",
+    "react-router-dom": "4.3.1"
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -19,10 +18,14 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ]
+      }
     ]
-  }
+  ]
 }

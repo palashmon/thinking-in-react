@@ -26,17 +26,13 @@ export default class SearchBar extends Component {
             <input
               type="text"
               placeholder="Search..."
-              className="form-control input-block"
+              className="form-control input-block mb-2"
               value={filterText}
               onChange={this.handleFilterTextChange}
             />
-            <p>
-              <input
-                type="checkbox"
-                checked={inStockOnly}
-                onChange={this.handleInStockChange}
-              />{' '}
-              Only show products in stock
+            <p className="mb-5">
+              <input type="checkbox" checked={inStockOnly} onChange={this.handleInStockChange} /> Only show
+              products in stock
             </p>
           </form>
         </div>

@@ -30,8 +30,10 @@ export default class FilterableProductTable extends Component {
     const { filterText, inStockOnly } = this.state;
 
     return (
-      <div className="container">
-        <div className="details-container">Simple Product Table</div>
+      <div className="container shadow-lg p-4 mb-4">
+        <div className="details-container mb-4">
+          <h1>Simple Product Table</h1>
+        </div>
         <div className="content-main">
           <SearchBar
             filterText={filterText}
@@ -39,11 +41,7 @@ export default class FilterableProductTable extends Component {
             onFilterTextChange={this.handleFilterTextChange}
             onInStockChange={this.handleInStockChange}
           />
-          <ProductTable
-            products={this.props.products}
-            filterText={filterText}
-            inStockOnly={inStockOnly}
-          />
+          <ProductTable products={this.props.products} filterText={filterText} inStockOnly={inStockOnly} />
         </div>
       </div>
     );

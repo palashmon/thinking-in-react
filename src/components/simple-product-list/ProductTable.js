@@ -17,12 +17,7 @@ export default class ProductTable extends Component {
         return;
       }
       if (product.category !== lastCategory) {
-        rows.push(
-          <ProductCategoryRow
-            category={product.category}
-            key={product.category}
-          />
-        );
+        rows.push(<ProductCategoryRow category={product.category} key={product.category} />);
       }
       rows.push(<ProductRow product={product} key={product.name} />);
       lastCategory = product.category;
@@ -30,8 +25,8 @@ export default class ProductTable extends Component {
 
     return (
       <div className="content-body">
-        <table className="table">
-          <thead>
+        <table className="table table-sm table-hover">
+          <thead className="thead-light">
             <tr>
               <th>Name</th>
               <th>Price</th>
