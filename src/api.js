@@ -39,22 +39,32 @@ const JsonApi = {
     {
       title: 'Card Title 1',
       text: 'Laudantium enim quasi est quidem magnam voluptate ipsam eos',
-      src: 'https://picsum.photos/200/300?image=1067'
+      src: 'https://picsum.photos/300/200?image=1040'
     },
     {
       title: 'Card Title 2',
-      text: 'Oluptatem occaecati omnis eligendi aut ad oluptatem doloribus vel accusantium quis pariatur',
-      src: 'https://picsum.photos/200/300?image=1059'
+      text: 'Oluptatem occaecati omnis eligendi aut ad oluptatem doloribus vel accusantium quis',
+      src: 'https://picsum.photos/300/200?image=1003'
     },
     {
       title: 'Card Title 3',
-      text: 'Ullam et saepe reiciendis voluptatem adipisci sit amet autem assumenda provident rerum culpa',
-      src: 'https://picsum.photos/200/300?image=1050'
+      text: 'Ullam et saepe reiciendis voluptatem adipisci sit amet autem assumenda provident',
+      src: 'https://picsum.photos/300/200?image=1050'
     },
     {
       title: 'Card Title 4',
-      text: 'Repudiandae veniam quaerat sunt sed lias aut fugiat sit autem sed est',
-      src: 'https://picsum.photos/200/300?image=1015'
+      text: 'Repudiandae veniam quaerat sunt sed lias aut fugiat sit autem sed est rerum culpa',
+      src: 'https://picsum.photos/300/200?image=1015'
+    },
+    {
+      title: 'Card Title 5',
+      text: 'Ullam et saepe reiciendis voluptatem adipisci sit amet autem assumenda provident',
+      src: 'https://picsum.photos/300/200?image=961'
+    },
+    {
+      title: 'Card Title 6',
+      text: 'Repudiandae veniam quaerat sunt sed lias aut fugiat sit autem sed est rerum culpa',
+      src: 'https://picsum.photos/300/200?image=1005'
     }
   ],
   getAllProducts: function() {

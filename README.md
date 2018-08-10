@@ -29,6 +29,13 @@ A simple product list display app with simple user interaction. Components hiera
 
 Our state lives in `FilterableProductTable` like `state = {filterText: '', inStockOnly: false}`. Then, we pass `filterText` and `inStockOnly` to `ProductTable` and `SearchBar` as a prop. Finally, we use these props to filter the rows in `ProductTable` and set the values of the form fields in `SearchBar`.
 
-### Simple Card
+### Simple Card List
 
-A simple card list display app. First we create a `Card` component and once we have a single `Card` component rendering, we try to display a list of them with some fake data.
+A simple card list display app. First we create a `Card` component and once we have a single `Card` component rendering, we try to display a list of them with some fake data. Components hierarchy is like:
+
+- Cards
+  - Card
+    - CardImageTop
+    - CardBody
+      - CardTitle
+      - CardText
