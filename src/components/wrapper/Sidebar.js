@@ -15,6 +15,9 @@ export default class Sidebar extends Component {
           <li>
             <Link to="/card">Card List</Link>
           </li>
+          <li>
+            <Link to="/shuffle-cards">Shuffle Cards</Link>
+          </li>
         </ul>
       </div>
     );

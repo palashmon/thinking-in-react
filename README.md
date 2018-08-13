@@ -39,3 +39,7 @@ A simple card list display app. First we create a `Card` component and once we h
     - CardBody
       - CardTitle
       - CardText
+
+### Shuffle Cards
+
+A simple project to shuffle a deck of cards. When the deck has been shuffled users are given the option to reset the deck back to the initial state or continue shuffling.

@@ -4,6 +4,7 @@ import Home from './Home';
 import NoMatch from './NoMatch';
 import FilterableProductTable from '../simple-product-list/FilterableProductTable';
 import Cards from '../card-list/Cards';
+import Deck from '../shuffle-cards/Deck';
 import JsonApi from 'api';
 
 // Fetch mock data from JsonApi
@@ -24,6 +25,7 @@ export default class PageContent extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/product" render={props => <FilterableProductTable {...props} products={products} />} />
             <Route path="/card" render={props => <Cards {...props} cards={cards} />} />
+            <Route path="/shuffle-cards" component={Deck} />
             <Route component={NoMatch} />
           </Switch>
         </div>

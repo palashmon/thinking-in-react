@@ -31,7 +31,7 @@ export default class FilterableProductTable extends Component {
 
     return (
       <div className="container shadow-lg p-4 mb-4">
-        <div className="details-container mb-4">
+        <div className="pb-2 mt-4 mb-4 border-bottom">
           <h1>Simple Product Table</h1>
         </div>
         <div className="content-main">
