@@ -2,14 +2,14 @@
 Css needed for Shuffle Cards UI
 */
 .card-main {
-  width: 75px;
+  width: 74px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   height: 100px;
   float: left;
   margin-right: 10px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.42);
