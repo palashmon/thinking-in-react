@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "5.0.0",
-    "react-router-dom": "6.9.0"
+    "react-router-dom": "6.10.0"
   },
   "scripts": {
     "precommit": "lint-staged",
