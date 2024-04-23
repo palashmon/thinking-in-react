@@ -1,8 +1,22 @@
 name: CI
-on: [push, pull_request]
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request: # PRs to main and master branches
+  workflow_dispatch: # manual trigger
+  
+# Control the concurrency of workflow runs
+# so that you can ensure that only one workflow runs at a time in a specific context.
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
   cancel-in-progress: true
+  
 jobs:
   test:
-    uses: palashmon/reusable-workflows/.github/workflows/main-build-legacy.yml@main
+    uses: palashmon/reusable-workflows/.github/workflows/main-build.yml@main
+    with:
+      test-needed: false
+      install-legacy-peer-deps: true
