@@ -1,4 +1,4 @@
-# Thinking In React
+# Thinking In React [![CI](https://github.com/palashmon/thinking-in-react/actions/workflows/main.yml/badge.svg)](https://github.com/palashmon/thinking-in-react/actions/workflows/main.yml)
 
 A walk through the thought process of building simple apps using React [blog](https://reactjs.org/docs/thinking-in-react.html) post "Thinking in React" concept.
 
