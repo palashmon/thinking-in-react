@@ -7,16 +7,35 @@ on:
       - master
   pull_request: # PRs to main and master branches
   workflow_dispatch: # manual trigger
-  
+
 # Control the concurrency of workflow runs
 # so that you can ensure that only one workflow runs at a time in a specific context.
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
   cancel-in-progress: true
-  
+
 jobs:
   test:
     uses: palashmon/reusable-workflows/.github/workflows/main-build.yml@main
     with:
       test-needed: false
       install-legacy-peer-deps: true
+
+  deploy:
+    name: Deploy to gh-pages
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Deploy
+        run: |
+          git config --global user.name $user_name
+          git config --global user.email $user_email
+          git remote set-url origin https://${github_token}@github.com/${repository}
+          npm run deploy
+        env:
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
