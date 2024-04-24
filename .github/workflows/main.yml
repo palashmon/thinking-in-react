@@ -20,22 +20,3 @@ jobs:
     with:
       test-needed: false
       install-legacy-peer-deps: true
-
-  deploy:
-    name: Deploy to gh-pages
-    needs: test
-    if: github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - name: Deploy
-        run: |
-          git config --global user.name $user_name
-          git config --global user.email $user_email
-          git remote set-url origin https://${github_token}@github.com/${repository}
-          npm run deploy
-        env:
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          github_token: ${{ secrets.PAT_TOKEN }}
-          repository: ${{ github.repository }}
