@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import CardTop from './CardTop';
-import CardNumber from './CardNumber';
-import CardBottom from './CardBottom';
+import CardTop from './CardTop.jsx';
+import CardNumber from './CardNumber.jsx';
+import CardBottom from './CardBottom.jsx';
 
 export default class Card extends Component {
   render() {

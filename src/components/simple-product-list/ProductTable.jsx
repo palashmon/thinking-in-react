@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ProductCategoryRow from './ProductCategoryRow';
-import ProductRow from './ProductRow';
+import ProductCategoryRow from './ProductCategoryRow.jsx';
+import ProductRow from './ProductRow.jsx';
 
 export default class ProductTable extends Component {
   render() {

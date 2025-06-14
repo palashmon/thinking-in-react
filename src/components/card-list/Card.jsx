@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CardImageTop from './CardImageTop';
-import CardBody from './CardBody';
+import CardImageTop from './CardImageTop.jsx';
+import CardBody from './CardBody.jsx';
 
 export default class Card extends Component {
   render() {

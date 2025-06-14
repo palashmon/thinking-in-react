@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CardTitle from './CardTitle';
-import CardText from './CardText';
+import CardTitle from './CardTitle.jsx';
+import CardText from './CardText.jsx';
 
 export default class CardBody extends Component {
   render() {
