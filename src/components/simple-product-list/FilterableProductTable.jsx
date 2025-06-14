@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SearchBar from './SearchBar';
-import ProductTable from './ProductTable';
+import SearchBar from './SearchBar.jsx';
+import ProductTable from './ProductTable.jsx';
 
 /**
  * Step 4: Identify Where Your State Should Live

@@ -1,29 +1,29 @@
 {
   "name": "thinking-in-react",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "^5.0.1"
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "devDependencies": {
-    "babel-plugin-module-resolver": "5.0.2",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-router-dom": "6.30.1"
   },
-  "scripts": {
-    "precommit": "lint-staged",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.5.2",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.0.0"
   },
-  "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": ["./src"]
-      }
-    ]
-  ]
+  "engines": {
+    "node": ">=20.0.0"
+  }
 }
